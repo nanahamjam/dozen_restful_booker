@@ -6,7 +6,7 @@ hosted_env = "http://automationintesting.online"
 
 @pytest.fixture(scope= "function")
 def branding_resp() -> requests.Response:
-    local = True
+    local = False
     if local:
         r = requests.get(local_env + "/branding/")
     else:
